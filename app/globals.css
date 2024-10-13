@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 210 20% 95%; /* Light background */
+    --foreground: 210 15% 10%; /* Dark text */
+    --card: 210 20% 98%; /* Light card background */
+    --card-foreground: 210 15% 15%; /* Dark card text */
+    --popover: 210 20% 98%; /* Light popover */
+    --popover-foreground: 210 15% 10%; /* Dark popover text */
+    --primary: 330 70% 45%; /* Soft red */
+    --primary-foreground: 210 10% 98%; /* Light primary text */
+    --secondary: 50 20% 95%; /* Light grey */
+    --secondary-foreground: 210 15% 10%; /* Dark grey */
+    --muted: 50 15% 90%; /* Muted light grey */
+    --muted-foreground: 210 15% 40%; /* Dark muted text */
+    --accent: 60 80% 50%; /* Soft yellow */
+    --accent-foreground: 210 15% 10%; /* Dark accent text */
+    --destructive: 0 100% 60%; /* Bright red */
+    --destructive-foreground: 210 10% 98%; /* Light destructive text */
+    --border: 210 10% 85%; /* Light border */
+    --input: 210 10% 90%; /* Light input */
+    --ring: 210 20% 60%; /* Medium ring */
+    --chart-1: 34 70% 50%; /* Soft orange */
+    --chart-2: 200 60% 40%; /* Soft teal */
+    --chart-3: 160 50% 30%; /* Soft green */
+    --chart-4: 240 80% 60%; /* Soft blue */
+    --chart-5: 50 90% 70%; /* Light yellow */
+    --radius: 0.5rem;
+  }
+  
+  .dark {
+    --background: 210 15% 10%; /* Dark background */
+    --foreground: 210 20% 95%; /* Light text */
+    --card: 210 15% 15%; /* Dark card */
+    --card-foreground: 210 20% 95%; /* Light card text */
+    --popover: 210 15% 15%; /* Dark popover */
+    --popover-foreground: 210 20% 95%; /* Light popover text */
+    --primary: 330 80% 60%; /* Brighter soft red */
+    --primary-foreground: 210 15% 10%; /* Dark primary text */
+    --secondary: 50 10% 20%; /* Dark grey */
+    --secondary-foreground: 210 20% 95%; /* Light secondary text */
+    --muted: 50 10% 20%; /* Dark muted grey */
+    --muted-foreground: 210 20% 75%; /* Light muted text */
+    --accent: 50 10% 20%; /* Dark accent */
+    --accent-foreground: 210 20% 95%; /* Light accent text */
+    --destructive: 0 90% 40%; /* Duller red */
+    --destructive-foreground: 210 20% 95%; /* Light destructive text */
+    --border: 50 15% 20%; /* Dark border */
+    --input: 50 15% 20%; /* Dark input */
+    --ring: 210 20% 80%; /* Light ring */
+    --chart-1: 34 80% 60%; /* Darker orange */
+    --chart-2: 200 70% 50%; /* Darker teal */
+    --chart-3: 160 50% 40%; /* Darker green */
+    --chart-4: 240 60% 70%; /* Darker blue */
+    --chart-5: 50 90% 60%; /* Darker yellow */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+  }
+}
